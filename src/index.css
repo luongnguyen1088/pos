@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 138 32% 97%;
+    --foreground: 146 26% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 146 26% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 146 26% 15%;
+
+    --primary: 146 63% 28%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 144 22% 93%;
+    --secondary-foreground: 145 24% 22%;
+
+    --muted: 140 16% 93%;
+    --muted-foreground: 145 10% 40%;
+
+    --accent: 142 42% 91%;
+    --accent-foreground: 146 58% 24%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 142 18% 84%;
+    --input: 142 18% 84%;
+    --ring: 146 63% 28%;
+
+    --radius: 0.75rem;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 45 93% 47%;
+    --warning-foreground: 20 20% 15%;
+
+    --sidebar-background: 147 31% 14%;
+    --sidebar-foreground: 0 0% 94%;
+    --sidebar-primary: 146 63% 28%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 146 26% 20%;
+    --sidebar-accent-foreground: 0 0% 94%;
+    --sidebar-border: 146 20% 24%;
+    --sidebar-ring: 146 63% 28%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(circle at top, hsl(var(--primary) / 0.12), transparent 34%),
+      linear-gradient(180deg, hsl(var(--background)), hsl(var(--background)));
+    background-attachment: fixed;
+    min-height: 100dvh;
+    overscroll-behavior-y: none;
+  }
+
+  #root {
+    min-height: 100dvh;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

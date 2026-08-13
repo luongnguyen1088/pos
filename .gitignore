@@ -1,0 +1,47 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vercel
+
+# Electron build directory
+dist_electron
+
+# Local environment variables
+.env
+
+# Built Electron binaries in public folder
+public/Momoka-POS-Setup.exe
+.env*
+
+# Local development files & compiled builds
+jdk/
+*.apk
+*.exe
+scratch/
+*.err
+.agents/
+.playwright-*/
+skills-lock.json
+bun.lock*
+
